@@ -1,0 +1,19 @@
+body {
+	font-family: "Helvtica", "Arial", sans-serif;
+	font-size: 14px;
+}
+abbr {
+	text-decoration: none;
+	border: 0px;
+	font-style: normal;
+}
+ul {
+	text-decoration: none;
+}
+li {
+	display: block;
+	/*float: left;*/
+	padding: 1em;
+	list-style: none;
+
+}

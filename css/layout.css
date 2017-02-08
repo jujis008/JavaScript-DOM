@@ -1,0 +1,46 @@
+body {
+	font-family: "Helvetica", "Arial", sans-serif;
+	background-color: #ccc;
+	color: #333;
+	margin: 1em 10%;
+}
+h1 {
+	color: #333;
+	background-color: transparent;
+}
+a {
+	color: #06c;
+	background-color: transparent;
+	font-weight: bold;
+	text-decoration: none;
+}
+ul {
+	padding: 0;
+}
+li {
+	float: left;
+	padding: 1em;
+	list-style: none;
+}
+img {
+	clear: both;
+	display: block;
+	width: 60px;
+	height: 60px;
+}
+#imagegallery {
+	list-style: none;
+}
+#imagegallery li {
+	display: inline;
+}
+#imagegallery li a img {
+	border: 1px;
+}
+
+#placeholder {
+	clear: both;
+	display: block;
+	width: 350px;
+	height: 300px;
+}
