@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Image Gallery</title>
+	<style type="text/css">
+		body {
+			font-family: "Helvetica", "Arial", serif;
+			color: #333;
+			background-color: #ccc;
+			margin: 1em 10%;
+		}
+		h1 {
+			color: #333;
+			background-color: transparent;
+		}
+		a {
+			color: #c60;
+			background-color: transparent;
+			font-weight: bold;
+			text-decoration: none;
+		}
+		ul {
+			padding: 0;
+		}
+		li {
+			float: left;
+			padding: 1em;
+			list-style: none;
+		}
+		img {
+			display: block;
+			clear: both;
+		}
+	</style>
+</head>
+<body>
+	<h1>Snapshots</h1>
+	<ul>
+		<li><a href="../images/bandwidth.png" title="A bandwidth display" onclick="showPic(this);return false;">Bandwidth</a></li>
+		<li><a href="../images/browsers.png" title="Popular browsers" onclick="showPic(this);return false;">Browsers</a></li>
+		<li><a href="../images/report.png" title="A reporting picture" onclick="showPic(this);return false;">Report</a></li>
+		<li><a href="../images/serverroom.jpg" title="A server room picture" onclick="showPic(this);return false;">ServerRoom</a></li>
+	</ul>
+	<img id="placeholder" src="../images/placeholder.gif" alt="my image gallery" />
+	<p id="description">Choose an image.</p>
+	<script type="text/javascript">
+		function showPic(whichpic) {
+			var source = whichpic.getAttribute("href");
+			var title_text = whichpic.getAttribute("title");
+			var description = document.getElementById("description");
+			var placeholder = document.getElementById("placeholder");
+			placeholder.setAttribute("src", source);
+			// alert(description.childNodes[0].nodeValue);
+			description.firstChild.nodeValue = title_text;
+			// alert(description.firstChild.nodeValue);
+		}
+		var body_element = document.getElementsByTagName("body")[0];
+		// alert(typeof body_element);
+		// alert(typeof document.getElementsByTagName("body"));
+		// alert(body_element.childNodes);
+		function countBodyChildren() {
+			var body_elements = document.getElementsByTagName("body")[0];
+			//nodeType有12种，只有3种有实用价值。
+			//Element nodeType=1
+			//Attribute nodeType=2
+			//Text nodeType=3
+			// alert(body_elements.nodeType);
+			// alert(body_elements.childNodes.length);
+		}
+		window.onload = countBodyChildren;
+	</script>
+</body>
+</html>

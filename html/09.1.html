@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>CSS</title>
+	<style type="text/css">
+		p{
+			color: grey;
+			font-family: "Arial", sans-serif;
+		}
+	</style>
+</head>
+<body>
+	<p>An example of a paragragh.</p>
+	<script type="text/javascript">
+		var paras = document.getElementsByTagName("p");
+		for(var i=0;i<paras.length;i++) {
+			paras[i].onclick = function() {
+				alert("you have clicked on a paragragh" + this.style.color);
+			}
+		}
+	</script>
+</body>
+</html>
